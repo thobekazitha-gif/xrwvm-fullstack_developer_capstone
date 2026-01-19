@@ -5,73 +5,156 @@
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <title>About Us - Best Cars Dealership</title>
+    <style>
+        body { 
+            background-color: #f4f7f6; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+        }
+        
+        .about-section {
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            padding: 60px 40px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .section-title { 
+            font-weight: 800; 
+            color: #2c3e50; 
+            line-height: 1.2;
+        }
+
+        .blue-divider {
+            width: 60px; 
+            height: 4px; 
+            background: #4A90E2; 
+            margin-bottom: 25px;
+            border-radius: 2px;
+        }
+
+        .team-card {
+            border: none;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: transparent;
+            margin-bottom: 30px;
+        }
+
+        .team-card:hover { 
+            transform: translateY(-10px); 
+        }
+
+        .profile-container {
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            background-color: #eee; /* Light gray background if image fails */
+        }
+
+        .name-banner {
+            background-color: #5d4684; 
+            color: white;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: -25px;
+            position: relative;
+            z-index: 2;
+            border-radius: 6px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 10px rgba(93, 70, 132, 0.3);
+        }
+
+        .role-text { 
+            font-weight: 700; 
+            color: #4A90E2; 
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .bio-text {
+            font-size: 0.95rem;
+            color: #6c757d;
+            line-height: 1.6;
+            padding: 0 10px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
         <div class="container-fluid">
-            <h2 style="padding-right: 5%;">Best Cars</h2>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" style="font-size: larger;" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-                    </li>
+            <h2 class="fw-bold ps-4">Best Cars</h2>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto pe-4 mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active fs-5 px-3 fw-bold" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 px-3" href="/contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <div class="card shadow-sm p-4 mb-5 bg-white rounded">
-            <div class="banner text-center" name="about-header">
-                <h1 class="display-4">About Us</h1>
-                <p class="lead">Welcome to <strong>Best Cars Dealership</strong>, home to the finest selection of vehicles in North America. Since 1995, we have specialized in providing high-quality domestic and imported cars at prices that respect your budget. Our mission is to make car buying transparent, easy, and enjoyable.</p>
+    <div class="container">
+        <div class="about-section">
+            <div class="row mb-5 align-items-start">
+                <div class="col-md-5">
+                    <h1 class="section-title text-uppercase">Meet The Team<br>Our Professionals</h1>
+                    <div class="blue-divider"></div>
+                </div>
+                <div class="col-md-7">
+                    <p class="text-secondary fs-5" style="border-left: 3px solid #eee; padding-left: 20px;">
+                        Welcome to <strong>Best Cars Dealership</strong>, home to the finest selection in North America. 
+                        Ensuring quality and trust since 1995.
+                    </p>
+                </div>
             </div>
 
-            <hr class="my-4">
-
-            <div class="row text-center">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0">
-                        <img class="card-img-top rounded-circle mx-auto d-block mt-3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jackie_Chan_July_2016.jpg/640px-Jackie_Chan_July_2016.jpg" alt="Jackie Chan" style="width: 150px; height: 150px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Jackie Chan</h5>
-                            <h6 class="text-muted">Honorary Chairman</h6>
-                            <p class="card-text">Jackie brings his legendary focus and energy to our team, ensuring our customer service is as high-impact as his movies.</p>
-                            <p class="text-info">jackie.chan@bestcars.com</p>
+            <div class="row g-5 text-center mt-2">
+                <div class="col-md-4">
+                    <div class="card team-card">
+                        <div class="profile-container">
+                            <img src="/static/jackie.jpg" 
+                                 onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jackie_Chan_July_2016.jpg/640px-Jackie_Chan_July_2016.jpg'" 
+                                 class="profile-img" 
+                                 alt="Jackie Chan">
+                            <div><div class="name-banner">Jackie Chan</div></div>
                         </div>
+                        <p class="role-text">Honorary Chairman</p>
+                        <p class="bio-text">Ensuring customer service is as high-impact as his legendary movies.</p>
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0">
-                        <img class="card-img-top rounded-circle mx-auto d-block mt-3" src="https://images.pexels.com/photos/5082976/pexels-photo-5082976.jpeg" alt="Sales Manager" style="width: 150px; height: 150px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Marcus Chen</h5>
-                            <h6 class="text-muted">Sales Director</h6>
-                            <p class="card-text">Marcus ensures that every customer finds the perfect vehicle to match their lifestyle and needs.</p>
-                            <p class="text-info">marcus.c@bestcars.com</p>
+                <div class="col-md-4">
+                    <div class="card team-card">
+                        <div class="profile-container">
+                            <img src="https://images.pexels.com/photos/5082976/pexels-photo-5082976.jpeg" class="profile-img" alt="Marcus Chen">
+                            <div><div class="name-banner">Marcus Chen</div></div>
                         </div>
+                        <p class="role-text">Sales Director</p>
+                        <p class="bio-text">Specializing in finding the perfect match for every driver's lifestyle.</p>
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0">
-                        <img class="card-img-top rounded-circle mx-auto d-block mt-3" src="https://images.pexels.com/photos/1852476/pexels-photo-1852476.jpeg" alt="Lead Technician" style="width: 150px; height: 150px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Elena Rodriguez</h5>
-                            <h6 class="text-muted">Lead Technician</h6>
-                            <p class="card-text">Elena oversees our rigorous 150-point inspection process for every car that enters our lot.</p>
-                            <p class="text-info">elena.r@bestcars.com</p>
+                <div class="col-md-4">
+                    <div class="card team-card">
+                        <div class="profile-container">
+                            <img src="https://images.pexels.com/photos/1852476/pexels-photo-1852476.jpeg" class="profile-img" alt="Elena Rodriguez">
+                            <div><div class="name-banner">Elena Rodriguez</div></div>
                         </div>
+                        <p class="role-text">Lead Technician</p>
+                        <p class="bio-text">Overseeing our rigorous 150-point inspection for every car.</p>
                     </div>
                 </div>
             </div>
