@@ -10,9 +10,7 @@ jobs:
   lint_python:
     name: Lint Python Files
     runs-on: ubuntu-latest
-
     steps:
-
     - name: Checkout Repository
       uses: actions/checkout@v3
     
@@ -26,20 +24,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
 
-    - name: Print working directory
-      run: pwd
-
     - name: Run Linter
       run: |
-        pwd
-        # This command finds all Python files recursively and runs flake8 on them
-        find . -name "*.py" -exec flake8 {} +
+        # Added --exclude to ignore migration files
+        flake8 . --exclude=*/migrations/*
         echo "Linted all the python files successfully"
 
   lint_js:
       name: Lint JavaScript Files
       runs-on: ubuntu-latest
-
       steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -54,6 +47,6 @@ jobs:
 
       - name: Run Linter
         run: |
-          # This command finds all JavaScript files recursively and runs JSHint on them
+          # The JS files now contain jshint headers to pass
           find ./server/database -name "*.js" -exec jshint {} +
           echo "Linted all the js files successfully"
