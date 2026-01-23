@@ -6,90 +6,17 @@
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <title>About Us - Best Cars Dealership</title>
     <style>
-        body { 
-            background-color: #f4f7f6; 
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-        }
-        
-        .about-section {
-            background: white;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            padding: 60px 40px;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        .section-title { 
-            font-weight: 800; 
-            color: #2c3e50; 
-            line-height: 1.2;
-        }
-
-        .blue-divider {
-            width: 60px; 
-            height: 4px; 
-            background: #4A90E2; 
-            margin-bottom: 25px;
-            border-radius: 2px;
-        }
-
-        .team-card {
-            border: none;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            background: transparent;
-            margin-bottom: 30px;
-        }
-
-        .team-card:hover { 
-            transform: translateY(-10px); 
-        }
-
-        .profile-container {
-            position: relative;
-            padding-bottom: 20px;
-        }
-
-        .profile-img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border: 1px solid #eee;
-            background-color: #eee; /* Light gray background if image fails */
-        }
-
-        .name-banner {
-            background-color: #5d4684; 
-            color: white;
-            padding: 10px 20px;
-            display: inline-block;
-            margin-top: -25px;
-            position: relative;
-            z-index: 2;
-            border-radius: 6px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            box-shadow: 0 4px 10px rgba(93, 70, 132, 0.3);
-        }
-
-        .role-text { 
-            font-weight: 700; 
-            color: #4A90E2; 
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
-
-        .bio-text {
-            font-size: 0.95rem;
-            color: #6c757d;
-            line-height: 1.6;
-            padding: 0 10px;
-        }
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', Arial, sans-serif; }
+        .about-section { background: white; border-radius: 25px; padding: 60px 40px; margin: 50px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+        .section-title { font-weight: 800; color: #2c3e50; }
+        .blue-divider { width: 60px; height: 4px; background: #4A90E2; margin-bottom: 25px; border-radius: 2px; }
+        .team-card { border: none; transition: all 0.4s; background: transparent; margin-bottom: 30px; }
+        .team-card:hover { transform: translateY(-10px); }
+        .profile-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .name-banner { background-color: #5d4684; color: white; padding: 10px 20px; display: inline-block; margin-top: -25px; position: relative; z-index: 2; border-radius: 6px; font-weight: 700; }
+        .role-text { font-weight: 700; color: #4A90E2; margin-top: 15px; }
+        .email-link { color: #6c757d; font-size: 0.9rem; text-decoration: none; display: block; margin-top: 5px; }
+        .email-link:hover { color: #4A90E2; }
     </style>
 </head>
 <body>
@@ -108,53 +35,47 @@
 
     <div class="container">
         <div class="about-section">
-            <div class="row mb-5 align-items-start">
-                <div class="col-md-5">
-                    <h1 class="section-title text-uppercase">Meet The Team<br>Our Professionals</h1>
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h1 class="section-title">About Us</h1>
                     <div class="blue-divider"></div>
-                </div>
-                <div class="col-md-7">
-                    <p class="text-secondary fs-5" style="border-left: 3px solid #eee; padding-left: 20px;">
-                        Welcome to <strong>Best Cars Dealership</strong>, home to the finest selection in North America. 
-                        Ensuring quality and trust since 1995.
+                    <p class="fs-5 text-secondary">
+                        Welcome to Best Cars Dealership, your premier destination for high-quality vehicles. 
+                        We pride ourselves on providing exceptional customer service and a vast selection of 
+                        cars to suit every lifestyle and budget. Our mission is to make your car-buying 
+                        experience transparent, enjoyable, and efficient.
                     </p>
                 </div>
             </div>
 
-            <div class="row g-5 text-center mt-2">
+            <div class="row g-5 text-center">
                 <div class="col-md-4">
                     <div class="card team-card">
-                        <div class="profile-container">
-                            <img src="/static/jackie.jpg" 
-                                 onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jackie_Chan_July_2016.jpg/640px-Jackie_Chan_July_2016.jpg'" 
-                                 class="profile-img" 
-                                 alt="Jackie Chan">
-                            <div><div class="name-banner">Jackie Chan</div></div>
-                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jackie_Chan_July_2016.jpg/640px-Jackie_Chan_July_2016.jpg" class="profile-img" alt="Jackie Chan">
+                        <div><div class="name-banner">Jackie Chan</div></div>
                         <p class="role-text">Honorary Chairman</p>
-                        <p class="bio-text">Ensuring customer service is as high-impact as his legendary movies.</p>
+                        <a href="mailto:jackie@bestcars.com" class="email-link">jackie@bestcars.com</a>
+                        <p class="bio-text mt-2">Ensuring customer service is as high-impact as his movies.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="card team-card">
-                        <div class="profile-container">
-                            <img src="https://images.pexels.com/photos/5082976/pexels-photo-5082976.jpeg" class="profile-img" alt="Marcus Chen">
-                            <div><div class="name-banner">Marcus Chen</div></div>
-                        </div>
+                        <img src="https://images.pexels.com/photos/5082976/pexels-photo-5082976.jpeg" class="profile-img" alt="Marcus Chen">
+                        <div><div class="name-banner">Marcus Chen</div></div>
                         <p class="role-text">Sales Director</p>
-                        <p class="bio-text">Specializing in finding the perfect match for every driver's lifestyle.</p>
+                        <a href="mailto:marcus@bestcars.com" class="email-link">marcus@bestcars.com</a>
+                        <p class="bio-text mt-2">Finding the perfect match for every driver's lifestyle.</p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="card team-card">
-                        <div class="profile-container">
-                            <img src="https://images.pexels.com/photos/1852476/pexels-photo-1852476.jpeg" class="profile-img" alt="Elena Rodriguez">
-                            <div><div class="name-banner">Elena Rodriguez</div></div>
-                        </div>
+                        <img src="https://images.pexels.com/photos/1852476/pexels-photo-1852476.jpeg" class="profile-img" alt="Elena Rodriguez">
+                        <div><div class="name-banner">Elena Rodriguez</div></div>
                         <p class="role-text">Lead Technician</p>
-                        <p class="bio-text">Overseeing our rigorous 150-point inspection for every car.</p>
+                        <a href="mailto:elena@bestcars.com" class="email-link">elena@bestcars.com</a>
+                        <p class="bio-text mt-2">Overseeing our rigorous 150-point inspection for every car.</p>
                     </div>
                 </div>
             </div>
